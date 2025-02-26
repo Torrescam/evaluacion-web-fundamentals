@@ -1,0 +1,156 @@
+.content-form{
+  display: grid;
+  gap:var(--spacing-4);
+  margin-top: 32px;
+}
+
+.form-fild p {
+  font-family: var(--text);
+  font-weight: 500;
+  font-size: var( --font-sm);
+  line-height: var(--leading-5);
+  margin-bottom: 5px;
+}
+
+.form-fild span {
+  font-family: var(--monospace);
+  font-weight: 600;
+  font-size: var( --font-sm);
+  line-height: var(--leading-4);
+} 
+
+.radio-group {
+  display: grid ;
+  gap: var(--spacing-1);
+}
+
+.radio-item input {
+	display: inline-block;
+	vertical-align: middle;
+  width: 16px;
+  height: 16px;
+  border: 1px;
+}
+
+.radio-item label {
+	vertical-align: middle;
+  font-weight: 500;
+  font-size: var( --font-sm);
+  line-height: 14px;
+}
+
+.checkbox-group {
+	display: grid ;
+  gap: var(--spacing-1);
+} 
+
+.checkbox-item input {
+	display: inline-block;
+	vertical-align: middle;
+	width: 16px;
+	height: 16px;
+	border-radius: 2px;
+	border: 2px solid var(--ring,#D4D4D4);
+}
+
+.checkbox-item label{
+	vertical-align: middle;
+	width: 331px;
+	height: 14px;
+  font-weight: 500;
+  font-size: var( --font-sm);
+  line-height: 14px;
+} 
+
+.content-demo-1{
+  background-color: var(--muted,#F5F5F5);
+  width: var( --width-2xl);
+  height: 132px;
+  border-radius: var(--rounded-md);
+  padding: 48px 0px 48px 0px;
+  text-align: center;
+}
+
+.content-demo-2 {
+  background-color: var(--muted,#F5F5F5);
+	border-radius: var(--rounded-lg);
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  padding: 20px;
+  box-sizing: border-box;
+  height: 100vh; /* Altura completa de la ventana */
+  width: 100%; /* el contenedor ocupe todo el ancho */
+}
+
+
+.content-demo-2 form{	
+	height: 480px;
+	background-color: #ffff;
+	border-radius: var(--rounded-lg);
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-2);
+	padding: var(--spacing-5);
+
+
+}
+
+.content-demo-2 form label {
+	font-weight: 500;
+	font-size:var(--font-sm);
+	line-height: 14px;
+}
+
+.content-demo-2 form input {
+	height: 40px;
+	border : 1px solid var(--border, #D4D4D4);
+	border-radius: var(--rounded-md);
+	padding: var(--spacing-2);
+	font-weight: 400;
+	font-size: var(--font-sm);
+	line-height: var(--leading-6);
+	font-family: var(--text);
+}
+
+.content-demo-2 form textarea{
+	width: 298px;
+	height: 80px;
+	border : 1px solid var(--border, #D4D4D4);
+	border-radius: var(--rounded-md);
+	padding: var(--spacing-2) var(--spacing-3);
+	font-weight: 400;
+	font-size: var(--font-sm);
+	line-height: var(--leading-6);
+	font-family: var(--text);
+  resize: none;/*no dimensiona el textearea*/
+}
+
+.error-message {
+  font-family: var(--text);
+  color: var(--danger-border,#DC2626);
+  font-weight: 400px;
+  font-size: var(--font-sm);
+	line-height: var(--leading-6);
+}
+
+#serverResponse {
+  width: 640px;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-top: 10px;
+  height: 600px;
+  background-color: #fff; 
+  overflow: auto;
+}
+
+#serverResponse pre {
+  white-space: pre-wrap; /* texto largo dentro del contenedor*/
+  overflow-wrap: break-word; /* texto largo para que no se desborde */
+  padding: 10px;
+  
+  font-weight: 300;
+  font-size: var(--font-base) ;
+}
+
+

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Fundamentals Evaluation - Manipulación DOM</title>
+    <link rel="stylesheet" href="./styles/index.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header__container">
+        <a href="./index.html">
+          <img
+            src="./assets/images/codeable-logo-sm.svg"
+            alt="codeable-logo"
+            width="135"
+            height="32"
+            class="header__logo"
+          />
+        </a>
+        <nav class="navigation">
+          <ul>
+            <li><a href="./diagramas.html">Diagramas VV</a></li>
+            <li><a href="./funciones.html">Funciones</a></li>
+            <li><a href="./dom.html">Manipulación del DOM</a></li>
+          </ul>
+        </nav>
+        <p class="header__name">Camilo Torres</p>
+      </div>
+    </header>
+    <main>
+      <section>
+        <article class="article-content">
+          <h1 class="content-h1">Manipulación del DOM</h1>
+          <h2 class="content-h2 margin-top-48 margin-bottom-24">
+            Instrucciones
+          </h2>
+          <p class="content-P">
+            Sigue las instrucciones y crea componentes web utilizando
+            JavaScript, manipulando el DOM, escuchando eventos e implementando
+            persistencia con localStorage.
+          </p>
+          <h2 class="content-h2 margin-top-48">Crea un 'Tooltip'</h2>
+          <p class="content-P margin-top-24">
+            Un Tooltip es un pequeño cuadro de información que aparece cuando
+            pasas el cursor sobre un elemento en una interfaz gráfica de
+            usuario. Este cuadro ofrece detalles adicionales sobre la función
+            del elemento, proporcionando así una ayuda contextual. Por ejemplo,
+            si pasas el cursor sobre un botón que guarda cambios en una
+            aplicación, un Tooltip podría aparecer con el texto "Guardar", para
+            clarificar qué hace ese botón. Los Tooltips son útiles para mejorar
+            la experiencia del usuario, ya que proporcionan orientación sin
+            requerir que se desplace a otra sección para obtener más
+            información.
+          </p>
+          <h3 class="content-h3 margin-top-32">Requerimiento</h3>
+          <p class="content-P margin-top-20">
+            Tu tarea es crear un Tooltip, un pequeño elemento emergente que
+            proporciona información adicional cuando el usuario pasa el cursor
+            sobre un elemento. Utilizarás JavaScript para manipular el DOM y
+            crear este componente.
+          </p>
+          <ul class="content-ul margin-top-20">
+            <li>
+              <span>Elemento Objetivo: </span>El elemento sobre el cual
+              aparecerá el Tooltip será cualquier elemento que tenga un atributo
+              `data-tooltip` definido.
+            </li>
+            <li>
+              <span>Contenido del Tooltip: </span>El valor del atributo será el
+              mensaje que aparecerá en el Tooltip. Por ejemplo, un elemento con
+              el atributo `data-tooltip="Grabar"` mostrará el texto "Grabar"
+              como contenido del Tooltip.
+            </li>
+            <li>
+              <span>Posicionamiento: </span>El Tooltip debe aparecer encima del
+              elemento objetivo.
+            </li>
+            <li>
+              <span>Estilo: </span>Sigue el diseño especificado en Figma para
+              dar estilo al Tooltip
+            </li>
+            <li>
+              <span>Interacción: </span>El Tooltip debe mostrarse cuando el
+              usuario pase el cursor sobre el elemento objetivo y desaparecer
+              cuando el cursor se mueva fuera del elemento. Pero no lo debe
+              hacer inmediato. El mouse debe mantenerse por encima del elemento
+              objetivo durante 300ms para luego mostrar el Tooltip. Si el cursor
+              sale del elemento objetivo antes de cumplirse los 300ms, el
+              Tooltip no debe mostrarse.
+            </li>
+          </ul>
+          <h3 class="content-h3 margin-top-32">Demo</h3>
+          <p class="content-P margin-top-20">
+            A continuación, presenta una demostración del Tooltip.
+          </p>
+          <pre class="content-pre margin-top-24">
+<code>
+  &lt;button data-tooltip="¡Funciona! 😄"&gt;Tooltip&lt;/button&gt;
+</code>
+</pre>
+          <div class="content-demo-1 margin-top-32">
+            <button class="button" data-tooltip="¡Funciona! 😄">Tooltip</button>
+          </div>
+          <h2 class="content-h2 margin-top-48">
+            Crea un Formulario con Validación en tiempo real
+          </h2>
+          <p class="content-P margin-top-24">
+            El objetivo de este ejercicio es crear un formulario HTML que
+            realice validaciones en tiempo real utilizando JavaScript, persista
+            el progreso usando localStorage y procese el envío usando JavaScript
+            para mostrar un mensaje con la respuesta del servidor.
+          </p>
+
+          <h3 class="content-h3 margin-top-32">Requerimientos</h3>
+          <h4 class="content-h4 margin-top-24">Campos del formulario:</h4>
+          <ul class="content-ul margin-top-20">
+            <li><span>Nombre: </span>Un input obligatorio</li>
+            <li>
+              <span>Apodo: </span> Un input obligatorio de entre 3 y 10
+              caracteres. Solo debe aceptar caracteres alfanuméricos. Estos son
+              letras (a-z) o (A-Z), dígitos (0-9).
+            </li>
+            <li>
+              <span>Biografía: </span> Textarea opcional, pero si se llena,
+              deberá tener mínimo 100 caracteres.
+            </li>
+            <li>
+              <span>Contraseña: </span> Un input obligatorio de mínimo 8
+              caracteres, al menos una letra mayúscula y un número.
+            </li>
+          </ul>
+
+          <h4 class="content-h4 margin-top-20">Validación en Tiempo Real</h4>
+          <ul class="content-ul margin-top-20">
+            <li>
+              Valida el contenido de cada campo inmediatamente cuando el usuario
+              comienza a escribir en él.
+            </li>
+            <li>
+              Muestra un mensaje de error debajo del campo cuando no pasa la
+              validación.
+            </li>
+            <li>
+              El mensaje de error debe desaparecer cuando el campo sea válido.
+            </li>
+          </ul>
+
+          <h4 class="content-h4 margin-top-20">Persistencia</h4>
+          <ul class="content-ul margin-top-20">
+            <li>
+              Guarda el progreso del usuario en el `localStorage` cada vez que
+              se valide un campo (no queremos guardar datos inválidos)
+            </li>
+            <li>
+              Al recargar la página, el formulario debe recuperar el estado
+              guardado del `localStorage`.
+            </li>
+            <li>
+              El campo Contraseña contiene datos sensibles por lo tanto no debe
+              almacenarse en `localStorage`
+            </li>
+          </ul>
+
+          <h4 class="content-h4 margin-top-20">Envío del Formulario</h4>
+          <ul class="content-ul margin-top-20">
+            <li>
+              El botón para enviar el formulario debe estar deshabilitado hasta
+              que todos los campos sean válidos.
+            </li>
+            <li>
+              Al hacer clic en enviar, simula una petición al servidor
+              utilizando JavaScript. El método debe ser POST, la URL será el
+              servicio echo '​https://mocktarget.apigee.net/echo'. Deberá tener
+              el header Content-Type adecuado.
+            </li>
+            <li>
+              Luego de procesar la respuesta, añade un elemento debajo del
+              formulario que muestre la respuesta del servidor en formato JSON.
+            </li>
+          </ul>
+
+          <h3 class="content-h3 margin-top-48">Demo</h3>
+          <p class="content-P margin-top-20">
+            A continuación, presenta una demostración del Formulario con
+            validación.
+          </p>
+          <pre class="content-pre margin-top-24">
+<code>
+  const user = document.querySelector('#name');
+  const nickname = document.querySelector("#nickname");
+  const biography = document.querySelector("#biography");
+  const password = document.querySelector("#password");
+
+  const requiredName = document.querySelector("#required-name");
+  const nicknameError = document.querySelector("#nickname-error");
+  const biographyError = document.querySelector("#biography-error");
+  const passwordError = document.querySelector("#password-error");
+
+  function buttonValidation() {
+    const userValid = user.validity.valid;
+    const nicknameValid = nickname.validity.valid;
+    const biographyValid = biography.value.length >= 100;
+    const passwordValid = password.validity.valid;
+
+    document.querySelector("#button").disabled = 
+    !((userValid && nicknameValid && biographyValid) && passwordValid);
+  }
+
+  user.addEventListener('input', function() {
+    if (!user.validity.valid) {
+        requiredName.textContent = 'El campo nombre es obligatorio';
+    } else {
+      requiredName.textContent = '';
+    }
+  buttonValidation();
+  });
+
+  nickname.addEventListener("input", function () {
+    if (!nickname.validity.valid) {
+        nicknameError.textContent = "Entre 3 y 10 caracteres alfanuméricos";
+    } else {
+      nicknameError.textContent = "";
+    }
+    buttonValidation();
+  });
+
+  biography.addEventListener("input", function () {
+    if (biography.value.length &lt; 100) {
+        biographyError.textContent = "Mínimo 100 caracteres";
+    } else {
+      biographyError.textContent = "";
+    }
+    buttonValidation();
+  });
+
+  password.addEventListener("input", function () {
+    if (!password.validity.valid) {
+      if (password.validity.tooShort) {
+          passwordError.textContent = "Mínimo 8 caracteres";
+        } else if (password.validity.patternMismatch) {
+            passwordError.textContent = 
+            "Debe contener al menos una letra mayúscula y un número";
+        }
+    } else {
+      passwordError.textContent = "";
+    }
+    buttonValidation();
+  });
+</code>
+</pre>
+          <div class="content-demo-2 margin-top-32">
+            <form name="register">
+              <label for="name">Nombre:</label>
+              <input type="text" id="name" name="name" />
+              <p class="error-message" id="required-name"></p>
+
+              <label for="nickname">Apodo:</label>
+              <input
+                type="text"
+                id="nickname"
+                name="nickname"
+                required
+                minlength="3"
+                maxlength="10"
+                pattern="[A-Za-z0-9]{3,10}"
+              />
+              <p class="error-message" id="nickname-error"></p>
+
+              <label for="biography">Biografía:</label>
+              <textarea
+                id="biography"
+                name="biography"
+                maxlength="100"
+                placeholder="Escribe tu biografía aquí"
+              ></textarea>
+              <p class="error-message" id="biography-error"></p>
+
+              <label for="password">Contraseña:</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                minlength="8"
+                pattern="(?=.*[A-Z])(?=.*\d).{8,}"
+              />
+              <p class="error-message" id="password-error"></p>
+
+              <button
+                type="submit"
+                id="button"
+                class="button--secondary"
+                disabled
+              >
+                Enviar
+              </button>
+            </form>
+            <div id="serverResponse"></div>
+          </div>
+        </article>
+      </section>
+    </main>
+    <script src="./navegation.js"></script>
+    <script src="./tooltip.js"></script>
+    <script src="./validacion.js"></script>
+    <script src="./local-storage.js"></script>
+  </body>
+</html>

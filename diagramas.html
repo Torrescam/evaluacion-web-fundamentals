@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Fundamentals Evaluation - Diagramas VV</title>
+    <link rel="stylesheet" href="./styles/index.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header__container">
+        <a href="./index.html">
+          <img
+            src="./assets/images/codeable-logo-sm.svg"
+            alt="codeable-logo"
+            width="135"
+            height="32"
+            class="header__logo"
+          />
+        </a>
+        <nav class="navigation">
+          <ul>
+            <li><a href="./diagramas.html">Diagramas VV</a></li>
+            <li><a href="./funciones.html">Funciones</a></li>
+            <li><a href="./dom.html">Manipulación del DOM</a></li>
+          </ul>
+        </nav>
+        <p class="header__name">Camilo Torres</p>
+      </div>
+    </header>
+    <main>
+      <section>
+        <article class="article-content">
+          <h1 class="content-h1">Diagramas VV</h1>
+          <h2 class="content-h2 margin-top-48 margin-bottom-24">
+            Instrucciones
+          </h2>
+          <p class="content-P">
+            Dibuja el estado del diagrama de variables y valores para cada
+            momento indicado por el ejercicio. Añade una imagen del diagrama al
+            documento. El diagrama deberá contener únicamente las variables y
+            valores que permanecen en la memoria. Luego contesta las preguntas
+            dejando marcado (checked) el radio button o el/los checkboxes
+            correspondientes.
+          </p>
+          <h2 class="content-h2 margin-top-48">Ejercicios</h2>
+          <h3 class="content-h3 margin-top-32">Ejercicio 1</h3>
+          <p class="content-P margin-top-20">
+            Analiza el siguiente código y dibuja el diagrama VV al terminar de
+            ejecutarse
+          </p>
+          <pre class="content-pre margin-top-24">
+<code>
+  const juan = {
+    nombre: "Juan",
+    edad: 25,
+    residencia: {
+    direccion: "Loma Hermosa 240",
+      ciudad: "Lima",
+      pais: "Peru",
+    },
+  };
+  const sandra = {
+    nombre: "Sandra",
+    edad: 25,
+    residencia: {
+      direccion: "Loma Hermosa 240",
+      ciudad: "Lima",
+      pais: "Peru",
+    },
+  };
+</code>
+        </pre>
+          <figure class="content-figure margin-top-32">
+            <img
+              src="./assets/images/diagramaVv-ejericio-1.png"
+              alt="Diagrama VV-ejericio 1"
+              width="668"
+              height="376"
+              class="content-img"
+            />
+            <figcaption>Diagrama al final de la ejecución</figcaption>
+          </figure>
+          <div class="content-form">
+            <form action="#" class="form-fild">
+              <p>
+                La expresión <span>`juan.edad === sandra.edad`</span> retorna
+              </p>
+              <div class="radio-group">
+                <div class="radio-item">
+                  <input
+                    type="radio"
+                    id="true"
+                    name="return"
+                    value="true"
+                    checked
+                    disabled
+                    focused
+                  />
+                  <label for="true" class="radio-label">true</label>
+                </div>
+                <div class="radio-item">
+                  <input type="radio" id="false" name="return" value="false" />
+                  <label for="false" class="radio-label">false</label>
+                </div>
+              </div>
+            </form>
+
+            <form action="#" class="form-fild">
+              <p>
+                La expresión
+                <span>`juan.residencia === sandra.residencia`</span> retorna
+              </p>
+              <div class="radio-group">
+                <div class="radio-item">
+                  <input type="radio" id="true" name="return" value="true" />
+                  <label for="true">true</label>
+                </div>
+                <div class="radio-item">
+                  <input
+                    type="radio"
+                    id="false"
+                    name="return"
+                    value="false"
+                    checked
+                    disabled
+                    focused
+                  />
+                  <label for="false">false</label>
+                </div>
+              </div>
+            </form>
+
+            <form action="#" class="form-fild">
+              <p>
+                La expresión<span
+                  >`juan.residencia.ciudad === sandra.residencia.ciudad`</span
+                >
+                retorna
+              </p>
+              <div class="radio-group">
+                <div class="radio-item">
+                  <input
+                    type="radio"
+                    id="true"
+                    name="return"
+                    value="true"
+                    checked
+                    disabled
+                    focused
+                  />
+                  <label for="true">true</label>
+                </div>
+                <div class="radio-item">
+                  <input type="radio" id="false" name="return" value="false" />
+                  <label for="false">false</label>
+                </div>
+              </div>
+            </form>
+          </div>
+          <h3 class="content-h3 margin-top-32">Ejercicio 2</h3>
+          <p class="content-P margin-top-20">
+            Analiza el siguiente código y dibuja el diagrama VV al terminar de
+            ejecutarse
+          </p>
+          <pre class="content-pre margin-top-24">
+<code>
+  const objeto1 = {};
+  const objeto2 = { b: 5 };
+  const objeto3 = { a: 10 };
+  
+  objeto1.a = objeto3.a;
+  objeto2.a = objeto1.a + 5;
+  objeto3.b = objeto1.b;
+  objeto1.b = 10;
+</code>
+        </pre>
+          <figure class="content-figure margin-top-32">
+            <img
+              src="./assets/images/diagrana-vv-2.png"
+              alt="Diagrama VV-ejericio 2"
+              width="668"
+              height="376"
+              class="content-img"
+            />
+            <figcaption>Diagrama al final de la ejecución</figcaption>
+          </figure>
+          <div class="content-form">
+            <form action="#" class="form-fild">
+              <p>
+                La expresión
+                <span>`objeto1.a + objeto2.b === objeto2.a`</span> retorna
+              </p>
+              <div class="radio-group">
+                <div class="radio-item">
+                  <input
+                    type="radio"
+                    id="true"
+                    name="return"
+                    value="true"
+                    checked
+                    disabled
+                    focused
+                  />
+                  <label for="true" class="radio-label">true</label>
+                </div>
+                <div class="radio-item">
+                  <input type="radio" id="false" name="return" value="false" />
+                  <label for="false" class="radio-label">false</label>
+                </div>
+              </div>
+            </form>
+
+            <form action="#" class="form-fild">
+              <p>El valor de <span>`objeto3.b`</span> es</p>
+              <div class="radio-group">
+                <div class="radio-item">
+                  <input type="radio" id="5" name="return" value="5" />
+                  <label for="5">5</label>
+                </div>
+                <div class="radio-item">
+                  <input type="radio" id="10" name="return" value="10" />
+                  <label for="10">10</label>
+                </div>
+                <div class="radio-item">
+                  <input type="radio" id="null" name="return" value="null" />
+                  <label for="null">null</label>
+                </div>
+                <div class="radio-item">
+                  <input
+                    type="radio"
+                    id="undefined"
+                    name="return"
+                    value="undefined"
+                    checked
+                    disabled
+                    focused
+                  />
+                  <label for="undefined">undefined</label>
+                </div>
+                <div class="radio-item">
+                  <input type="radio" id="error" name="return" value="error" />
+                  <label for="error">error</label>
+                </div>
+              </div>
+            </form>
+
+            <form action="#" class="form-fild">
+              <p>La expresión<span>`objeto1.a === objeto1.b`</span> retorna</p>
+              <div class="radio-group">
+                <div class="radio-item">
+                  <input
+                    type="radio"
+                    id="true"
+                    name="return"
+                    value="true"
+                    checked
+                    disabled
+                    focused
+                  />
+                  <label for="true">true</label>
+                </div>
+                <div class="radio-item">
+                  <input type="radio" id="false" name="return" value="false" />
+                  <label for="false">false</label>
+                </div>
+              </div>
+            </form>
+          </div>
+          <h3 class="content-h3 margin-top-32">Ejercicio 3</h3>
+          <p class="content-P margin-top-20">
+            Analiza el siguiente código y dibuja un diagrama VV para cada uno de
+            los momentos indicados. Recuerda que una función es un valor
+            representado por el símbolo `( )`. No es necesario escribir el
+            contenido de la función en el diagrama.
+          </p>
+          <pre class="content-pre margin-top-24">
+<code>
+  function agregar(arreglo, valor) {
+    return arreglo.push(valor);
+  }
+            
+  const frutas = ["pera", "manzana"];
+            
+  const resultado = agregar(frutas, "durazno");
+            
+  // Punto A: dibuja el diagrama en este punto
+            
+  const copia = frutas;
+            
+  agregar(copia, "platano");
+            
+  // Punto B: dibuja el diagrama en este punto
+</code>
+        </pre>
+          <figure class="content-figure margin-top-32">
+            <img
+              src="./assets/images/diagramaA-ejercicio-3.png"
+              alt="Diagrama punto A ejercicio-3"
+              width="668"
+              height="376"
+              class="content-img"
+            />
+            <figcaption>Diagrama en punto A</figcaption>
+          </figure>
+          <figure class="content-figure margin-top-32">
+            <img
+              src="./assets/images/diagramaB-ejericio-3.png"
+              alt="Diagrama punto B ejercicio-3"
+              width="668"
+              height="376"
+              class="content-img"
+            />
+            <figcaption>Diagrama en punto B</figcaption>
+          </figure>
+
+          <div class="content-form">
+            <form action="#" class="form-fild">
+              <p>El valor de resultado<span>`resultado`</span> es</p>
+              <div class="radio-group">
+                <div class="radio-item">
+                  <input
+                    type="radio"
+                    id="pera,manzana,durazno"
+                    name="return"
+                    value="pera,manzana,durazno"
+                  />
+                  <label for="pera,manzana,durazno"
+                    >[pera,manzana,durazno]</label
+                  >
+                </div>
+                <div class="radio-item">
+                  <input
+                    type="radio"
+                    id="durazno"
+                    name="return"
+                    value="durazno"
+                  />
+                  <label for="durazno">'durazno'</label>
+                </div>
+                <div class="radio-item">
+                  <input
+                    type="radio"
+                    id="3"
+                    name="return"
+                    value="3"
+                    checked
+                    disabled
+                    focused
+                  />
+                  <label for="3">3</label>
+                </div>
+                <div class="radio-item">
+                  <input type="radio" id="4" name="return" value="4" />
+                  <label for="4">4</label>
+                </div>
+              </div>
+            </form>
+
+            <form action="#" class="form-fild">
+              <p>El valor de<span>`frutas.length`</span>en el Punto B es</p>
+              <div class="radio-group">
+                <div class="radio-item">
+                  <input type="radio" id="2" name="return" value="2" />
+                  <label for="2">2</label>
+                </div>
+                <div class="radio-item">
+                  <input type="radio" id="3" name="return" value="3" />
+                  <label for="3">3</label>
+                </div>
+                <div class="radio-item">
+                  <input
+                    type="radio"
+                    id="4"
+                    name="return"
+                    value="4"
+                    checked
+                    disabled
+                    focused
+                  />
+                  <label for="4">4</label>
+                </div>
+                <div class="radio-item">
+                  <input
+                    type="radio"
+                    id="undefined"
+                    name="return"
+                    value="undefined"
+                  />
+                  <label for="undefined">undefined</label>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <h3 class="content-h3 margin-top-32">Ejercicio 4</h3>
+          <p class="content-P margin-top-20">
+            Analiza el siguiente código y dibuja un diagrama VV al finalizar la
+            ejecución. Recuerda que una función es un valor representado por el
+            símbolo `( )`. No es necesario escribir el contenido de la función
+            en el diagrama.
+          </p>
+          <pre class="content-pre margin-top-24">
+<code>
+  function Persona(nombre) {
+    this.nombre = nombre;
+  }
+  
+  Persona.prototype.presentarse = function () {
+    return `Hola, mi nombre es ${this.nombre}`;
+  };
+  
+  function Mago(nombre, casa) {
+    Persona.call(this, nombre);
+    this.casa = casa;
+  }
+  
+  Mago.prototype = Object.create(Persona.prototype);
+  Mago.prototype.constructor = Mago;
+  
+  Mago.prototype.invocarHechizo = function () {
+    return `${this.nombre} invoca un hechizo`;
+  };
+  
+  const petunia = new Persona("Petunia");
+  const harry = new Mago("Harry", "Gryffindor");         
+</code>
+        </pre>
+          <figure class="content-figure margin-top-32">
+            <img
+              src="./assets/images/diagramaVv-ejericio4.png"
+              alt="Diagrama VV-ejericio 4"
+              width="668"
+              height="376"
+              class="content-img"
+            />
+            <figcaption>Diagrama al final de la ejecucion</figcaption>
+          </figure>
+          <div class="content-form">
+            <form action="#" class="form-fild">
+              <p>Marca todas las correctas</p>
+              <!-- revisar los estilos, es un checkboox -->
+              <div class="checkbox-group">
+                <div class="checkbox-item">
+                  <input
+                    type="checkbox"
+                    id="persona-mago"
+                    name="return"
+                    value="persona-mago"
+                    checked
+                    disabled
+                  />
+                  <label for="persona-mago"
+                    >`Persona` y `Mago` son funciones constructoras</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    type="checkbox"
+                    id="harry"
+                    name="return"
+                    value="harry"
+                  />
+                  <label for="harry"
+                    >El prototipo de `harry` es `petunia`</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    type="checkbox"
+                    id="objetos"
+                    name="return"
+                    value="objetos"
+                    checked
+                    disabled
+                    focused
+                  />
+                  <label for="objetos"
+                    >Los objetos creado con la función `Mago` tienen acceso al
+                    método `presentarse`</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    type="checkbox"
+                    id="palabra-new"
+                    name="return"
+                    value="palabra-new"
+                  />
+                  <label for="palabra-new"
+                    >El uso de la palabra `new` es opcional</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    type="checkbox"
+                    id="invocarHechizos"
+                    name="return"
+                    value="invocarHechizos"
+                    checked
+                    disabled
+                    focused
+                  />
+                  <label for="invocarHechizos"
+                    >Solo el objeto `harry` tiene acceso al método
+                    `invocarHechizo`</label
+                  >
+                </div>
+              </div>
+            </form>
+
+            <form action="#" class="form-fild">
+              <p>
+                <span>`harry`</span> es una instancia de<span>`Persona`</span>
+              </p>
+              <div class="radio-group">
+                <div class="radio-item">
+                  <input type="radio" id="true" name="return" value="true" />
+                  <label for="true">true</label>
+                </div>
+                <div class="radio-item">
+                  <input
+                    type="radio"
+                    id="false"
+                    name="return"
+                    value="false"
+                    checked
+                    disabled
+                    focused
+                  />
+                  <label for="false">false</label>
+                </div>
+              </div>
+            </form>
+
+            <form action="#" class="form-fild">
+              <p>
+                La expresión
+                <span>`harry.invocarHechizo.call(petunia)`</span>retorna
+              </p>
+              <div class="radio-group">
+                <div class="radio-item">
+                  <input
+                    type="radio"
+                    id="harryHechizo"
+                    name="return"
+                    value="harryHechizo"
+                  />
+                  <label for="harryHechizo">'Harry invoca un hechizo'</label>
+                </div>
+                <div class="radio-item">
+                  <input
+                    type="radio"
+                    id="petuniaHechizo"
+                    name="return"
+                    value="petuniaHechizo"
+                    checked
+                    disabled
+                    focused
+                  />
+                  <label for="petuniaHechizo"
+                    >'Petunia invoca un hechizo'</label
+                  >
+                </div>
+                <div class="radio-item">
+                  <input type="radio" id="error" name="return" value="error" />
+                  <label for="error">Error</label>
+                </div>
+              </div>
+            </form>
+          </div>
+          <!-- revisar estilos -->
+          <p class="content-P margin-top-20">
+            Re-escribe el código usando la sintaxis de Clases de JavaScript
+          </p>
+          <pre class="content-pre margin-top-24">
+<code>
+  class Persona {
+    constructor(nombre){
+      this.nombre = nombre;
+    }
+    presentarse(){
+      return `Hola, mi nombre es ${this.nombre}`;
+    }
+  }
+  
+  class Mago extends Persona {
+    constructor(nombre,casa){
+      super(nombre);
+      this.casa = casa;
+    }
+    invocarHechizo(){
+      return `${this.nombre} invoca un hechizo`;
+    }
+  }
+
+  const petunia = new Persona("Petunia");
+  const harry = new Mago("Harry", "Gryffindor");
+</code>
+</pre>
+        </article>
+      </section>
+    </main>
+    <script src="./navegation.js"></script>
+  </body>
+</html>

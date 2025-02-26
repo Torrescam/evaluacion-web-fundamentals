@@ -1,0 +1,46 @@
+body {
+  font-family: var(--text);
+  color: var(--foreground);
+  background-color: var(--background);
+  font-size: var(--font-base);
+  line-height: var(--leading-6);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading);
+}
+
+code {
+  font-family: var(--monospace);
+  font-weight: 400px;
+  font-size: var(--font-sm);
+  line-height: var( --leading-5);
+  color: var(--muted,#f5f5f5);
+}
+
+hr {
+  margin-block: 48px;
+  border: none;
+  border-top: 1px solid var(--border);
+}
+
+:focus {
+  outline-offset: 3px;
+  outline-color: var(--ring);
+  outline-width: 2px;
+}
+
+figcaption {
+  font-family: var(--text);
+  font-weight: 400;
+  font-size: var(--font-sm);
+  line-height: var(--leading-5);
+  color: var(--muted-foreground,#525252);
+  margin-top: 12px;
+}
+
