@@ -1,36 +1,58 @@
-# Evaluación: Web Fundamentals
+# **Evaluación: Web Fundamentals - Codeable**
 
 <img src="https://res.cloudinary.com/dwdgpw20b/image/upload/v1697137102/illustrations/ev-web-dev_wfrkmg.png" />
 
-## Recursos
+## **Descripción**
 
-- <a href="https://www.figma.com/file/L1RAjebb6Wf7m78NT2Czzt/Web-Fundamentals-Individual?type=design&node-id=0%3A1&mode=design" target="_blank">Diseño en Figma</a>
+Este proyecto es mi evaluación final del módulo **Web Fundamentals** en Codeable. Implementé una página web desde cero basada en un diseño en **Figma**, utilizando **HTML, CSS y JavaScript**.
 
-## Requerimientos
+### **📌 Contenido del proyecto**
 
-El desafío es crear una página web para su evaluación individual.
+✔ **Página principal (`index.html`)** con enlaces a cada sección.  
+✔ **Diagramas VV (`diagramas.html`)**: Representación visual del estado de variables en ejercicios de JavaScript.  
+✔ **Funciones y Clases (`funciones.html`)**: Implementación de funciones en `funciones.js`, con pruebas en `test.html`.  
+✔ **Manipulación del DOM (`dom.html`)**: Creación de componentes interactivos como un **Tooltip** y un **Formulario dinámico**.  
+✔ **Uso de Git y GitHub** para control de versiones.
 
-### Creación de paginas
+## **🛠️ Tecnologías utilizadas**
 
-Siguiendo el diseño en Figma, deberás construir y estilizar usando CSS las siguientes páginas:
+- HTML
+- CSS
+- JavaScript
+- Git & GitHub
 
-- `index.html`: Página principal con links al resto de páginas
-- `diagramas.html`: Descripción de cuatro ejercicios relacionados a la creación de Diagramas VV
-- `funciones.html`: Descripción de cuatro ejercicios relacionados a la implementación de funciones y clases.
-- `dom.html`: Descripción de dos ejercicios relacionados a la creación de elementos interactivos usando JavaScript.
+---
 
-Adicionalmente el proyecto base ya cuenta con la página `test.html` que contiene el resultado de la ejecución de los tests descritos en `funciones.test.js`. No es necesario hacer nada adicional en estos archivos.
+### **🔹 ¿Cómo ejecutarlo?**
 
-### Resolución de los ejercicios
+Si quieres probarlo en tu equipo:
 
-Deberás resolver los ejercicios propuestos e incluir tus respuestas en los lugares indicados.
+```bash
+git clone https://github.com/Torrescam/evaluacion-web-fundamentals
+cd TU_REPO
+```
 
-- Para el caso de los diagramas VV, deberás incluir una imagen de cada diagrama en `diagramas.html`
-- Para las funciones, deberás implementar las funciones en el archivo `funciones.js` y luego copiar el texto de tus resultados en `funciones.html` según se indica.
-- Para los componentes web interactivos como el Tooltip y el Formulario, deberás crear los archivos JavaScript que consideres necesarios y cargarlos en `dom.html`. Asi podrás mostrar las Demo de los elementos en el lugar que se indica.
+Luego abre el archivo `index.html` en tu navegador.
 
-## Fecha de entrega
+---
 
-**La fecha máxima de entrega es domingo a las 23:59:59 EST (media noche)**. Si necesitas tiempo extra comunícate con tu TA.
+🔴 **Ver versión en vivo aquí:**  
+🔗 [Mi proyecto en GitHub Pages](https://torrescam.github.io/evaluacion-web-fundamentals/index.html)
 
-Happy coding! 🧑‍💻🧑‍💻🧑‍💻
+### **📌 Estado del proyecto**
+
+✅ **Proyecto funcional**, pero sigo mejorando algunos aspectos como la manipulación del DOM.
+
+📌 ¡Cualquier sugerencia es bienvenida! 😃
+
+---
+
+### **📎 Recursos adicionales**
+
+- 🎨 [Diseño en Figma](https://www.figma.com/file/L1RAjebb6Wf7m78NT2Czzt/Web-Fundamentals-Individual?type=design&node-id=0%3A1&mode=design)
+
+---
+
+### **📝 Notas finales**
+
+Este proyecto forma parte de mi formación en desarrollo web. **Estoy en constante aprendizaje y buscando mejorar mis habilidades.** ¡Cualquier comentario o sugerencia es bienvenida! 🚀
