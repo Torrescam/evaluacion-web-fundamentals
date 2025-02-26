@@ -29,7 +29,7 @@ Si quieres probarlo en tu equipo:
 
 ```bash
 git clone https://github.com/Torrescam/evaluacion-web-fundamentals
-cd TU_REPO
+cd evaluacion-web-fundamentals
 ```
 
 Luego abre el archivo `index.html` en tu navegador.
